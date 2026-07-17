@@ -1,0 +1,44 @@
+name: 不具合報告 / Bug report
+description: 個人情報や実症例データを含めず、再現可能な問題を報告します
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        この投稿はインターネット上で公開されます。患者・職員・施設を識別できる情報、実症例データ、識別可能なスクリーンショットを含めないでください。緊急対応や個別症例相談の窓口ではありません。
+  - type: input
+    id: app-version
+    attributes:
+      label: アプリのバージョン / App version
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: iOSと端末 / iOS version and device
+      placeholder: iOS 18.x, iPhone 15
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順 / Steps to reproduce
+      description: 架空データまたは十分に匿名化したデータだけを使用してください。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待した結果と実際の結果 / Expected and actual result
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 公開前の確認 / Privacy confirmation
+      options:
+        - label: 患者・職員・施設を識別できる情報、実症例データ、個人情報が含まれていないことを確認しました。
+          required: true
+        - label: この投稿がインターネット上で公開されることを理解しました。
+          required: true

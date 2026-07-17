@@ -1,0 +1,31 @@
+name: 機能要望 / Feature request
+description: 記録や振り返りの操作改善を提案します
+title: "[Request] "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        この投稿はインターネット上で公開されます。個別症例相談、投薬助言の依頼、患者・職員・施設を識別できる情報、実症例データを含めないでください。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 困っている操作 / Workflow problem
+      description: 記録や振り返りで難しい操作を、架空の例で説明してください。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 改善案 / Proposed improvement
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: 公開前の確認 / Scope confirmation
+      options:
+        - label: 個別の臨床助言や緊急対応を求める投稿ではありません。
+          required: true
+        - label: 患者・職員・施設を識別できる情報、実症例データ、個人情報が含まれていないことを確認しました。
+          required: true
