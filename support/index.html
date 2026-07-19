@@ -29,6 +29,8 @@
       <span>AnesthesiaSheet</span>
     </a>
     <nav class="site-nav" aria-label="メインナビゲーション">
+      <a href="../terms/">利用条件</a>
+      <a href="../recovery/">復元</a>
       <a href="./" aria-current="page">サポート</a>
       <a href="../privacy/">プライバシー</a>
     </nav>
@@ -38,7 +40,7 @@
 <main id="main" class="content">
   <header class="page-header">
     <h1>サポート</h1>
-    <div class="meta">最終更新日: 2026年7月17日</div>
+    <div class="meta">最終更新日: 2026年7月18日</div>
     <p class="lead">不具合報告と機能要望はGitHub Issuesで受け付けています。投稿は公開されるため、患者や職員を識別できる情報を含めないでください。</p>
     <div class="language-links" aria-label="言語">
       <a href="#japanese">日本語</a>
@@ -51,6 +53,7 @@
       <h2>このページ</h2>
       <nav>
         <a href="#contact">サポート窓口</a>
+        <a href="#private-reporting">非公開の安全性報告</a>
         <a href="#before-posting">投稿前の確認</a>
         <a href="#scope">対応範囲</a>
         <a href="#english">English</a>
@@ -69,6 +72,12 @@
         <a class="primary-link" href="https://github.com/better-day-tech/anesthesia-sheet-support/issues">GitHub Issuesを開く</a>
       </section>
 
+      <section id="private-reporting">
+        <h2>非公開の安全性報告</h2>
+        <p>公開前の脆弱性、セキュリティまたはプライバシー上の問題は、GitHubの非公開報告機能を使用してください。患者・職員・施設を識別できる情報、実症例データ、復旧キーは送信しないでください。この窓口は緊急対応や個別症例相談には使用できません。</p>
+        <a class="primary-link" href="https://github.com/better-day-tech/anesthesia-sheet-support/security/advisories/new">非公開で安全性の問題を報告</a>
+      </section>
+
       <section id="before-posting">
         <h2>投稿前の確認</h2>
         <ul>
@@ -76,7 +85,7 @@
           <li>再現手順と、期待した結果・実際の結果を記載する</li>
           <li>患者氏名、患者ID、生年月日、住所、電話番号を含めない</li>
           <li>施設名、職員名、症例日時など、組み合わせにより個人を識別できる情報を含めない</li>
-          <li>スクリーンショットは架空データまたは十分に匿名化したものだけを使用する</li>
+          <li>再現用の入力とスクリーンショットには架空データだけを使用し、実症例データを使用しない</li>
         </ul>
         <div class="privacy-box">
           <p><strong>スクリーンショットの墨消しだけでは、通知、写真、ファイル名、位置情報などが残る場合があります。</strong> 投稿前に画像全体を確認してください。</p>
@@ -86,19 +95,22 @@
       <section id="scope">
         <h2>対応範囲</h2>
         <p>個別症例の相談、緊急対応、診断、投薬や患者管理に関する助言は行いません。AnesthesiaSheetは個人メモと自己振り返りの補助アプリであり、公式記録や臨床判断の代替ではありません。</p>
+        <p>暗号化バックアップの一般的な操作手順は<a href="../recovery/">オフライン復元ページ</a>で案内します。復旧キーの照会、再発行、代行復号、個別症例データの受領は行いません。</p>
       </section>
 
       <section id="english" lang="en">
         <h2>English</h2>
         <p>Support is provided through public GitHub Issues for bug reports, feature requests, basic usage discussion, and release notices. Individual replies and response times are not guaranteed.</p>
+        <p>Use <a href="https://github.com/better-day-tech/anesthesia-sheet-support/security/advisories/new">GitHub private vulnerability reporting</a> for unreleased vulnerabilities or security and privacy issues. Do not submit patient, staff, or facility identifiers, real-case data, or recovery keys. This channel is not available for emergencies or individual case consultation.</p>
         <h3>Before posting</h3>
         <ul>
           <li>Include the app version, iOS version, device model, and reproducible steps.</li>
           <li>Do not include patient, staff, or facility identifiers.</li>
-          <li>Use only fictional or fully de-identified screenshots.</li>
+          <li>Use only fictional data in reproduction steps and screenshots. Do not use real-case data.</li>
           <li>Remember that GitHub Issues are publicly visible on the internet.</li>
         </ul>
         <p>Individual case consultation, emergency support, diagnosis, medication advice, and patient-management advice are not provided. AnesthesiaSheet does not replace official records or clinical judgment.</p>
+        <p>General encrypted-backup instructions are available on the <a href="../recovery/">offline recovery page</a>. Recovery-key lookup, reissue, decryption on a user's behalf, and receipt of individual case data are not provided.</p>
       </section>
     </article>
   </div>
@@ -109,6 +121,8 @@
     <span>© 2026 AnesthesiaSheet</span>
     <nav class="footer-links" aria-label="フッターナビゲーション">
       <a href="../">Home</a>
+      <a href="../terms/">Terms</a>
+      <a href="../recovery/">Recovery</a>
       <a href="../privacy/">Privacy</a>
     </nav>
   </div>

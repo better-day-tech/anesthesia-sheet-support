@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; img-src data:; object-src 'none'; media-src 'none'; font-src 'none'; frame-src 'none'; worker-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>AnesthesiaSheet Offline Recovery v1</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f3f6f7;
+      --surface: #ffffff;
+      --text: #172126;
+      --muted: #5d6a70;
+      --line: #ccd7db;
+      --accent: #1769aa;
+      --accent-text: #ffffff;
+      --warning: #9a4f23;
+      --warning-bg: #fff0e5;
+      --good: #237a57;
+      --good-bg: #e5f4ed;
+      --danger: #a12d36;
+      --danger-bg: #fbe9ea;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1518;
+        --surface: #171f23;
+        --text: #f1f5f6;
+        --muted: #b3c0c5;
+        --line: #3a494f;
+        --accent: #79bff0;
+        --accent-text: #07151e;
+        --warning: #f2ad7a;
+        --warning-bg: #452b20;
+        --good: #73d2aa;
+        --good-bg: #173c30;
+        --danger: #ff9da4;
+        --danger-bg: #482328;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+    main { width: min(100% - 32px, 780px); margin: 0 auto; padding: 52px 0 72px; }
+    header { margin-bottom: 30px; }
+    h1 { margin: 0 0 8px; font-size: clamp(1.7rem, 6vw, 2.35rem); line-height: 1.2; letter-spacing: 0; }
+    h2 { margin: 0 0 16px; font-size: 1.15rem; letter-spacing: 0; }
+    p { margin: 0; color: var(--muted); }
+    .version { margin-bottom: 7px; color: var(--accent); font-size: 13px; font-weight: 700; text-transform: uppercase; }
+    .panel { margin-top: 18px; padding: 22px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+    .field { display: grid; gap: 7px; margin-top: 16px; }
+    .field:first-of-type { margin-top: 0; }
+    label { font-weight: 700; }
+    input[type="file"], input[type="password"] {
+      width: 100%;
+      min-height: 46px;
+      padding: 9px 11px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--bg);
+      color: var(--text);
+      font: inherit;
+    }
+    input:focus-visible, button:focus-visible { outline: 3px solid #f2a900; outline-offset: 2px; }
+    .hint { font-size: 13px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    button {
+      min-height: 44px;
+      padding: 10px 15px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--text);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button.primary { border-color: var(--accent); background: var(--accent); color: var(--accent-text); }
+    button:disabled { cursor: not-allowed; opacity: 0.45; }
+    .status { margin-top: 18px; padding: 12px 14px; border-left: 4px solid var(--warning); background: var(--warning-bg); color: var(--text); }
+    .status.good { border-left-color: var(--good); background: var(--good-bg); }
+    .status.error { border-left-color: var(--danger); background: var(--danger-bg); }
+    .output { display: none; }
+    .output.visible { display: block; }
+    pre {
+      max-height: 430px;
+      overflow: auto;
+      margin: 0;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--bg);
+      color: var(--text);
+      font: 12px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+    .security { margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13px; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    @media (max-width: 520px) { main { width: min(100% - 24px, 780px); padding-top: 30px; } .panel { padding: 17px; } .actions button { width: 100%; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="version">AnesthesiaSheet Recovery Kit v1</p>
+    <h1>オフライン復元</h1>
+    <p>このファイルは外部通信を禁止しています。ローカルで開いた場合だけ復号できます。</p>
+  </header>
+
+  <div id="location-status" class="status" role="status"></div>
+
+  <section class="panel" aria-labelledby="restore-title">
+    <h2 id="restore-title">バックアップを開く</h2>
+    <div class="field">
+      <label for="archive">暗号化バックアップ</label>
+      <input id="archive" type="file" accept=".anesbackup,application/json">
+      <p class="hint"><code>.anesbackup</code>ファイルを選択します。</p>
+    </div>
+    <div class="field">
+      <label for="secret">復旧キーまたはパスフレーズ</label>
+      <input id="secret" type="password" inputmode="text" autocomplete="off" spellcheck="false">
+      <p class="hint">復旧キーは外部へ送信されず、この画面にも保存されません。</p>
+    </div>
+    <div class="actions">
+      <button id="decrypt" class="primary" type="button">復元する</button>
+      <button id="clear" type="button">画面を消去</button>
+    </div>
+    <div id="operation-status" class="status" role="status" aria-live="polite">ファイルと復旧キーを選択してください。</div>
+  </section>
+
+  <section id="output" class="panel output" aria-labelledby="output-title">
+    <h2 id="output-title">復元結果</h2>
+    <pre id="readable"></pre>
+    <div class="actions">
+      <button id="download-text" class="primary" type="button">読み取り用TXTを保存</button>
+      <button id="download-json" type="button">完全JSONを保存</button>
+    </div>
+    <p class="hint">保存後のTXT・JSONは暗号化されていません。取り扱いに注意してください。</p>
+  </section>
+
+  <p class="security">形式: AES-256-GCM / PBKDF2-HMAC-SHA256 600,000回 / ランダムsalt・nonce / 認証付き暗号。<br>外部スクリプト、解析、広告、ネットワーク接続はありません。</p>
+</main>
+
+<script>
+(() => {
+  "use strict";
+
+  const EXPECTED = Object.freeze({
+    format: "AnesthesiaSheetEncryptedArchive",
+    version: 1,
+    cipher: "AES-256-GCM",
+    kdf: "PBKDF2-HMAC-SHA256",
+    iterations: 600000,
+    portableFormat: "AnesthesiaSheetPortableArchive"
+  });
+  const AAD = `${EXPECTED.format}|${EXPECTED.version}|${EXPECTED.cipher}|${EXPECTED.kdf}|${EXPECTED.iterations}`;
+  const isLocalFile = window.location.protocol === "file:";
+  const elements = {
+    location: document.getElementById("location-status"),
+    archive: document.getElementById("archive"),
+    secret: document.getElementById("secret"),
+    decrypt: document.getElementById("decrypt"),
+    clear: document.getElementById("clear"),
+    operation: document.getElementById("operation-status"),
+    output: document.getElementById("output"),
+    readable: document.getElementById("readable"),
+    text: document.getElementById("download-text"),
+    json: document.getElementById("download-json")
+  };
+  let restoredArchive = null;
+
+  if (isLocalFile) {
+    elements.location.textContent = "ローカルファイルとして開いています。復号機能を利用できます。";
+    elements.location.className = "status good";
+  } else {
+    elements.location.textContent = "安全のためWeb配信中の復号機能は無効です。このHTMLをダウンロードし、Finderから開いてください。";
+    elements.location.className = "status error";
+    elements.decrypt.disabled = true;
+  }
+
+  function fromBase64(value) {
+    const binary = atob(value);
+    const bytes = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i += 1) bytes[i] = binary.charCodeAt(i);
+    return bytes;
+  }
+
+  function combine(left, right) {
+    const combined = new Uint8Array(left.length + right.length);
+    combined.set(left, 0);
+    combined.set(right, left.length);
+    return combined;
+  }
+
+  function validateEnvelope(envelope) {
+    if (!envelope || envelope.format !== EXPECTED.format || envelope.version !== EXPECTED.version ||
+        envelope.cipher !== EXPECTED.cipher || envelope.kdf !== EXPECTED.kdf ||
+        envelope.iterations !== EXPECTED.iterations) {
+      throw new Error("対応していない、または破損したバックアップ形式です。");
+    }
+    for (const field of ["salt", "nonce", "ciphertext", "tag"]) {
+      if (typeof envelope[field] !== "string" || envelope[field].length === 0) {
+        throw new Error("バックアップに必要な暗号情報がありません。");
+      }
+    }
+  }
+
+  async function decryptArchive(envelope, passphrase) {
+    validateEnvelope(envelope);
+    const normalized = passphrase.trim().normalize("NFKC");
+    if (normalized.length < 12) throw new Error("復旧キーまたはパスフレーズが短すぎます。");
+    if (!window.crypto || !window.crypto.subtle) throw new Error("このブラウザはWeb Cryptoに対応していません。");
+
+    const encoder = new TextEncoder();
+    const material = await crypto.subtle.importKey(
+      "raw",
+      encoder.encode(normalized),
+      "PBKDF2",
+      false,
+      ["deriveKey"]
+    );
+    const key = await crypto.subtle.deriveKey(
+      { name: "PBKDF2", salt: fromBase64(envelope.salt), iterations: envelope.iterations, hash: "SHA-256" },
+      material,
+      { name: "AES-GCM", length: 256 },
+      false,
+      ["decrypt"]
+    );
+    const plaintext = await crypto.subtle.decrypt(
+      {
+        name: "AES-GCM",
+        iv: fromBase64(envelope.nonce),
+        additionalData: encoder.encode(AAD),
+        tagLength: 128
+      },
+      key,
+      combine(fromBase64(envelope.ciphertext), fromBase64(envelope.tag))
+    );
+    const archive = JSON.parse(new TextDecoder().decode(plaintext));
+    if (archive.format !== EXPECTED.portableFormat || archive.version !== EXPECTED.version ||
+        !Array.isArray(archive.cases) || typeof archive.readableText !== "string") {
+      throw new Error("復号後のデータ形式を検証できませんでした。");
+    }
+    return archive;
+  }
+
+  function setOperation(message, kind = "") {
+    elements.operation.textContent = message;
+    elements.operation.className = `status ${kind}`.trim();
+  }
+
+  function download(content, type, filename) {
+    const url = URL.createObjectURL(new Blob([content], { type }));
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
+  elements.decrypt.addEventListener("click", async () => {
+    const file = elements.archive.files[0];
+    const passphrase = elements.secret.value;
+    if (!isLocalFile || !file || !passphrase) {
+      setOperation("バックアップファイルと復旧キーを入力してください。", "error");
+      return;
+    }
+    elements.decrypt.disabled = true;
+    setOperation("復号と整合性確認を実行しています…");
+    try {
+      const envelope = JSON.parse(await file.text());
+      restoredArchive = await decryptArchive(envelope, passphrase);
+      elements.readable.textContent = restoredArchive.readableText;
+      elements.output.classList.add("visible");
+      setOperation(`復元しました。${restoredArchive.cases.length}件の症例が含まれています。`, "good");
+      elements.secret.value = "";
+    } catch (error) {
+      restoredArchive = null;
+      elements.output.classList.remove("visible");
+      setOperation("復元できませんでした。鍵、ファイル、形式を確認してください。詳細: " + error.message, "error");
+    } finally {
+      elements.decrypt.disabled = !isLocalFile;
+    }
+  });
+
+  elements.clear.addEventListener("click", () => {
+    restoredArchive = null;
+    elements.archive.value = "";
+    elements.secret.value = "";
+    elements.readable.textContent = "";
+    elements.output.classList.remove("visible");
+    setOperation("ファイルと復旧キーを選択してください。");
+  });
+
+  elements.text.addEventListener("click", () => {
+    if (restoredArchive) download(restoredArchive.readableText, "text/plain;charset=utf-8", "AnesthesiaSheet-Recovered.txt");
+  });
+  elements.json.addEventListener("click", () => {
+    if (restoredArchive) download(JSON.stringify(restoredArchive, null, 2), "application/json", "AnesthesiaSheet-Recovered.json");
+  });
+})();
+</script>
+</body>
+</html>

@@ -24,7 +24,7 @@ body:
     id: steps
     attributes:
       label: 再現手順 / Steps to reproduce
-      description: 架空データまたは十分に匿名化したデータだけを使用してください。
+      description: 架空データだけを使用し、実症例データは使用しないでください。
     validations:
       required: true
   - type: textarea

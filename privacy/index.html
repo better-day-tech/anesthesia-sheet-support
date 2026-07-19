@@ -29,6 +29,8 @@
       <span>AnesthesiaSheet</span>
     </a>
     <nav class="site-nav" aria-label="メインナビゲーション">
+      <a href="../terms/">利用条件</a>
+      <a href="../recovery/">復元</a>
       <a href="../support/">サポート</a>
       <a href="./" aria-current="page">プライバシー</a>
     </nav>
@@ -38,7 +40,7 @@
 <main id="main" class="content">
   <header class="page-header">
     <h1>プライバシーポリシー</h1>
-    <div class="meta">最終更新日: 2026年7月17日</div>
+    <div class="meta">第1版 / 最終更新日: 2026年7月19日</div>
     <p class="lead">AnesthesiaSheetに保存される情報、外部送信、データ削除、問い合わせ時の取り扱いを説明します。</p>
     <div class="fact-strip" aria-label="プライバシー概要">
       <div class="fact">
@@ -82,22 +84,26 @@
 
       <section id="stored-data">
         <h2>保存される情報</h2>
-        <p>症例メモ、バイタル、投与ログ、IN/OUT、設定値、ユーザーが登録した指導医リストなどは、ユーザーの端末内に保存されます。</p>
+        <p>症例メモ、バイタル、投与ログ、IN/OUT、設定値、ユーザーが登録した指導医リストなどは、ユーザーの端末内に保存されます。症例ファイルはiOSのData Protectionで保護され、アプリ内の設定から画面ロック中の保護と自動保存のどちらを優先するか選択できます。</p>
       </section>
 
       <section id="transmission">
         <h2>外部送信と共有</h2>
-        <p>アプリは外部アカウントを作成せず、症例データを開発者サーバーへ送信しません。ユーザーがiOSの共有機能を使ってデータを書き出した場合、その共有先には各サービスのプライバシーポリシーが適用されます。端末バックアップに含まれるデータは、ユーザーのiOSおよびiCloudの設定に従って管理されます。</p>
+        <p>アプリは外部アカウントを作成せず、症例データを開発者サーバーへ送信しません。ユーザーがiOSの共有機能を使ってデータを書き出した場合、その共有先には各サービスのプライバシーポリシーが適用されます。症例をiOSの端末バックアップに含めるかはアプリ内で選択でき、含める場合はユーザーのiOS、iCloudまたはFinderの設定に従って管理されます。</p>
+        <p>書き出しは、全記録を読み取れる個人保管用、正確な日付・症例タイトル・指導医・自由記載などを除外する共有用、全症例を暗号化する保管用に分かれます。共有用は識別性を減らすもので、匿名化を保証しません。暗号化保管用はPC上でTXTまたはJSONへ復元でき、現在はアプリへの再取込には対応していません。個人保管用と復元後のTXT・JSONは暗号化されていません。</p>
+        <p>暗号化バックアップは、端末内でAES-256-GCMとPBKDF2-HMAC-SHA256を使って作成されます。復旧キーは開発者へ送信・保管されず、紛失した場合に開発者が復元または再発行することはできません。</p>
       </section>
 
       <section id="website">
         <h2>このサポートサイト</h2>
         <p>このサイトは独自のCookie、アクセス解析、広告を使用していません。サイトはGitHub Pagesで配信されるため、アクセス時の情報は<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHubのプライバシーステートメント</a>に従って処理される場合があります。</p>
+        <p>復元ページは手順とダウンロードを提供するだけで、Web配信中は復号機能を無効にしています。ダウンロード版の復元ツールはローカルファイルとして動作し、外部通信、解析、広告、外部ライブラリを使用しません。</p>
       </section>
 
       <section id="identifiers">
         <h2>患者識別情報</h2>
         <p>患者氏名、患者ID、生年月日、住所、電話番号など、患者を識別できる情報は入力しない運用を想定しています。症例日時、施設名、職員名なども、組み合わせにより個人を識別できる場合があります。</p>
+        <p>指導医欄はユーザーが任意に登録する端末内の表示ラベルです。必要性と所属施設の規則を確認し、個人名が不要な場合は略号、別名または役割名を使用してください。書き出しや端末バックアップに含まれる可能性があります。</p>
       </section>
 
       <section id="deletion">
@@ -117,15 +123,19 @@
 
       <section id="english" lang="en">
         <h2>English</h2>
+        <p>Version 1 / Last updated: July 19, 2026.</p>
         <p>AnesthesiaSheet is a personal support app for anesthesia case notes, manually entered intraoperative records, and post-case review.</p>
         <h3>Data stored</h3>
-        <p>Case notes, vital signs, medication logs, IN/OUT records, settings, and user-entered supervisor lists are stored on the user's device.</p>
+        <p>Case notes, vital signs, medication logs, IN/OUT records, settings, and user-entered supervisor lists are stored on the user's device. Case archives use iOS Data Protection, and users can choose whether to prioritize stronger protection while the device is locked or continued autosave after first unlock.</p>
         <h3>Transmission and sharing</h3>
-        <p>The app does not create an external account and does not transmit case data to a developer-operated server. When a user exports data through the iOS share sheet, the selected service's privacy policy applies. Data included in a device backup is managed according to the user's iOS and iCloud settings.</p>
+        <p>The app does not create an external account and does not transmit case data to a developer-operated server. When a user exports data through the iOS share sheet, the selected service's privacy policy applies. Users can choose whether case archives are included in the OS-managed device backup; when included, they are managed according to the user's iOS, iCloud, or Finder settings.</p>
+        <p>Exports are separated into a readable personal archive, a sharing copy that omits exact dates, case titles, supervisor labels, and free text, and an encrypted archival backup. The sharing copy reduces identifiers but does not guarantee anonymity. The encrypted archive can be recovered to TXT or JSON on a computer; re-importing it into the app is not currently supported. Personal archives and recovered TXT or JSON files are not encrypted.</p>
+        <p>Encrypted backups are created on the device using AES-256-GCM and PBKDF2-HMAC-SHA256. Recovery keys are not transmitted to or retained by the developer. The developer cannot recover or reissue a lost key.</p>
         <h3>This support site</h3>
         <p>This site does not use first-party cookies, analytics, or advertising. It is delivered through GitHub Pages, which may process access information under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+        <p>The recovery page provides instructions and a download only; decryption is disabled while the tool is served over the web. The downloaded tool runs as a local file and uses no external network connection, analytics, advertising, or third-party library.</p>
         <h3>Identifiers</h3>
-        <p>Users should not enter patient-identifiable information. Dates, facility names, and staff names may also identify a person when combined with other details.</p>
+        <p>Users should not enter patient-identifiable information. Dates, facility names, and staff names may also identify a person when combined with other details. A supervisor entry is an optional on-device display label entered by the user. Follow local policy and use initials, an alias, or a role label when a personal name is unnecessary. Such labels may be included in exports and device backups.</p>
         <h3>Deletion</h3>
         <p>Users can delete all case data from Settings. This removes saved cases and the current working case, then creates a new empty draft. App settings are retained unless changed separately. Data already included in a device backup remains subject to Apple's backup settings.</p>
         <h3>Public support posts</h3>
@@ -142,6 +152,8 @@
     <span>© 2026 AnesthesiaSheet</span>
     <nav class="footer-links" aria-label="フッターナビゲーション">
       <a href="../">Home</a>
+      <a href="../terms/">Terms</a>
+      <a href="../recovery/">Recovery</a>
       <a href="../support/">Support</a>
     </nav>
   </div>
