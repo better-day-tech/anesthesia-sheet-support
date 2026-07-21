@@ -40,7 +40,7 @@
 <main id="main" class="content">
   <header class="page-header">
     <h1>利用条件</h1>
-    <div class="meta">第4版 / 最終更新日: 2026年7月18日</div>
+    <div class="meta">第5版 / 最終更新日: 2026年7月21日</div>
     <p class="lead">AnesthesiaSheetを使用する前に、用途、医療上の限界、利用者の責任、データの取扱いをご確認ください。</p>
     <div class="language-links" aria-label="言語">
       <a href="#japanese">日本語</a>
@@ -84,7 +84,7 @@
       <section id="purpose">
         <h2>2. 目的と対象</h2>
         <p>本アプリは、麻酔症例に関する手入力の個人メモ、時刻、バイタル、投与・出来事、IN/OUTの整理と、利用者自身の振り返りを補助します。診断、治療、投薬、用量選択、患者別の推奨または自動判断を行う機能は提供しません。</p>
-        <p>施設別希釈濃度は、利用者が施設手順と実際の薬剤ラベルを確認して登録し、投与ログへ手動転記するための記録補助設定です。表示値は推奨濃度ではなく、利用者が確認済みにするまで術中画面に表示されません。本機能は用量または投与速度を計算しません。</p>
+        <p>施設別希釈濃度は、利用者が施設手順と実際の薬剤ラベルを確認して登録し、投与ログへ手動転記するための任意の記録補助設定です。症例ごとに施設設定を使用しない選択もできます。表示値は推奨濃度ではなく、利用者が確認済みにするまで術中画面に表示されません。本機能は用量または投与速度を計算しません。</p>
         <p>時刻記録は端末時計または利用者の手動編集に基づきます。保存後の編集には明示的な保存操作が必要で、修正・削除の補助履歴を表示しますが、改変防止された監査証跡、認証タイムスタンプ、または実際の処置時刻を証明するものではありません。</p>
         <p>本アプリは、所属施設の許可と監督のもとで利用する成人の医療従事者または研修者を想定しています。資格、権限、監督または施設規則を満たさない状況で患者ケアに使用してはなりません。</p>
         <p>本アプリの提供により、開発者と利用者または患者との間に医療者・患者関係、診療契約、監督関係その他の専門職関係が成立するものではありません。所属施設または医療従事者が負う法令上・専門職上の義務を開発者が引き受けるものでもありません。</p>
@@ -117,6 +117,7 @@
         <h2>6. データと公開投稿</h2>
         <p>症例データは端末内に保存されます。端末故障、OS更新、アプリ削除、バックアップ設定または共有操作により、データが失われたり外部サービスへ渡ったりする可能性があります。必要な公式記録は承認されたシステムへ記録し、本アプリを唯一の保存先にしないでください。</p>
         <p>個人保管用の読み取り可能な書き出しには、症例日時、自由記載、投与・出来事、IN/OUTおよび表示ラベルが含まれる場合があります。共有用の識別情報削減版は一部の識別性の高い項目を除外しますが、匿名性または再識別不能性を保証しません。利用者は書き出し前に内容と送信先を確認してください。</p>
+        <p>施設設定ファイルには施設の略称、登録濃度、単位が含まれます。正式な施設名は不要です。共有前に略称と送信先を確認してください。読み込んだ施設設定は未確認として追加されるため、利用者が施設手順と実際の薬剤ラベルを確認し、必要な場合にのみ確認済みにしてください。</p>
         <p>暗号化バックアップの復旧キーまたはパスフレーズは利用者自身が別の安全な場所へ保管してください。復旧キーの紛失、誤入力、ファイル破損、形式非対応などにより復元できない場合があります。開発者は鍵を保管せず、紛失した鍵の再発行または復号を行えません。復元後のTXT・JSONは暗号化されません。</p>
         <p>指導医欄はユーザーが任意に登録する表示ラベルです。必要性と所属施設の規則を確認し、個人名が不要な場合は略号、別名または役割名を使用してください。利用者は、入力した表示ラベルとその書き出し・バックアップを適切に管理する責任を負います。</p>
         <p>GitHub Issuesへの投稿は公開されます。公開サポートでは個別症例の相談、緊急対応、診断、投薬または患者管理の助言を行いません。詳細は<a href="../privacy/">プライバシーポリシー</a>と<a href="../support/">サポート方針</a>をご確認ください。</p>
@@ -142,12 +143,12 @@
 
       <section id="english" lang="en">
         <h2>English</h2>
-        <p>Version 4 / Last updated: July 18, 2026. These product-specific Terms supplement the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a>.</p>
+        <p>Version 5 / Last updated: July 21, 2026. These product-specific Terms supplement the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a>.</p>
         <h3>1. Acceptance and application</h3>
         <p>By acknowledging the in-app notice and using AnesthesiaSheet, you agree to these Terms, the Privacy Policy, and the applicable Apple EULA. Do not use the app if you do not agree. A material change may require a new in-app acknowledgement.</p>
         <h3>2. Purpose and audience</h3>
         <p>AnesthesiaSheet supports manually entered personal notes, times, vital signs, medication and event records, IN/OUT organization, and self-review. It does not provide diagnosis, treatment, medication orders, dose selection, patient-specific recommendations, or automated clinical decisions. The app is intended for adult healthcare professionals or trainees acting with appropriate authorization and supervision.</p>
-        <p>Facility-specific dilution concentrations are user-confirmed record settings for manual transcription into a medication log. They are not recommended concentrations, remain hidden from the intraoperative screen until confirmed by the user, and are not used to calculate a dose or infusion rate.</p>
+        <p>Facility-specific dilution concentrations are optional, user-confirmed record settings for manual transcription into a medication log. A user may choose not to use facility settings for a case. The values are not recommended concentrations, remain hidden from the intraoperative screen until confirmed by the user, and are not used to calculate a dose or infusion rate.</p>
         <p>Time records are based on the device clock or manual edits. Editing a saved time requires an explicit save action, and corrections or removals may appear in a supplementary change history. This history is not a tamper-resistant audit trail, certified timestamp, or proof of the actual time of a clinical action.</p>
         <p>Use of the app does not create a clinician-patient, treatment, supervisory, or other professional relationship with the developer, and does not transfer to the developer any duty owed by a healthcare professional or institution.</p>
         <h3>3. License and intellectual property</h3>
@@ -164,6 +165,7 @@
         <h3>6. Data and public posts</h3>
         <p>Case data is stored on the device and may be lost or transferred through device failure, OS updates, app deletion, backups, or sharing. Keep required official records in an approved system and do not use the app as their only storage location.</p>
         <p>A readable personal export may include case dates, free text, medication and event records, IN/OUT, and display labels. The identifier-reduced sharing copy omits selected high-risk fields but does not guarantee anonymity or prevent re-identification. Review the content and destination before export.</p>
+        <p>A facility-settings file contains the facility alias, entered concentrations, and the unit. An official facility name is unnecessary. Review the alias and destination before sharing. Imported facility settings are added as unconfirmed; verify them against local procedure and the actual medication label before marking them confirmed.</p>
         <p>Store the encrypted-backup recovery key or passphrase separately in a secure location. Recovery may fail because of a lost or mistyped key, damaged file, or unsupported format. The developer does not retain keys and cannot reissue a lost key or decrypt the backup. Recovered TXT and JSON files are not encrypted.</p>
         <p>A supervisor entry is an optional display label entered by the user. Follow local policy and use initials, an alias, or a role label when a personal name is unnecessary. You are responsible for the label and any export or backup containing it. GitHub Issues are public and are not used for patient-specific, emergency, diagnostic, medication, or clinical-management advice.</p>
         <h3>7. Accuracy, availability, and liability</h3>
