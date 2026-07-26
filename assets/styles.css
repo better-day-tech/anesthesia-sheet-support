@@ -394,6 +394,13 @@ li {
   text-decoration: none;
 }
 
+.language-links a:hover,
+.language-links a[aria-current="page"] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
 .fact-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
