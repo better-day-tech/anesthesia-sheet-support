@@ -1,5 +1,5 @@
 name: 機能要望 / Feature request
-description: 記録や振り返りの操作改善を提案します
+description: 記録や振り返りの操作改善を提案 / Suggest a recording or review workflow improvement
 title: "[Request] "
 labels: [enhancement]
 body:
@@ -7,11 +7,12 @@ body:
     attributes:
       value: |
         この投稿はインターネット上で公開されます。個別症例相談、投薬助言の依頼、患者・職員・施設を識別できる情報、実症例データを含めないでください。
+        This post is public on the internet. Do not request individual-case or medication advice, and do not include patient, staff, or facility identifiers or real-case data.
   - type: textarea
     id: problem
     attributes:
       label: 困っている操作 / Workflow problem
-      description: 記録や振り返りで難しい操作を、架空の例で説明してください。
+      description: 架空の例で説明 / Describe the workflow problem using a fictional example.
     validations:
       required: true
   - type: textarea
@@ -25,7 +26,7 @@ body:
     attributes:
       label: 公開前の確認 / Scope confirmation
       options:
-        - label: 個別の臨床助言や緊急対応を求める投稿ではありません。
+        - label: 個別の臨床助言や緊急対応を求める投稿ではありません。 / This post does not request individual clinical advice or emergency support.
           required: true
-        - label: 患者・職員・施設を識別できる情報、実症例データ、個人情報が含まれていないことを確認しました。
+        - label: 患者・職員・施設を識別できる情報、実症例データ、個人情報が含まれていないことを確認しました。 / I confirm that this post contains no identifiers, real-case data, or personal information.
           required: true
