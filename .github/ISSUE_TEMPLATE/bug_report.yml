@@ -1,5 +1,5 @@
 name: 不具合報告 / Bug report
-description: 個人情報や実症例データを含めず、再現可能な問題を報告します
+description: 個人情報や実症例データを含めず報告 / Report a reproducible issue without real-case data
 title: "[Bug] "
 labels: [bug]
 body:
@@ -7,6 +7,7 @@ body:
     attributes:
       value: |
         この投稿はインターネット上で公開されます。患者・職員・施設を識別できる情報、実症例データ、識別可能なスクリーンショットを含めないでください。緊急対応や個別症例相談の窓口ではありません。
+        This post is public on the internet. Do not include patient, staff, or facility identifiers, real-case data, or identifiable screenshots. This is not an emergency or individual-case support channel.
   - type: input
     id: app-version
     attributes:
@@ -24,7 +25,7 @@ body:
     id: steps
     attributes:
       label: 再現手順 / Steps to reproduce
-      description: 架空データだけを使用し、実症例データは使用しないでください。
+      description: 架空データのみ使用 / Use fictional data only. Do not use real-case data.
     validations:
       required: true
   - type: textarea
@@ -38,7 +39,7 @@ body:
     attributes:
       label: 公開前の確認 / Privacy confirmation
       options:
-        - label: 患者・職員・施設を識別できる情報、実症例データ、個人情報が含まれていないことを確認しました。
+        - label: 患者・職員・施設を識別できる情報、実症例データ、個人情報が含まれていないことを確認しました。 / I confirm that this post contains no identifiers, real-case data, or personal information.
           required: true
-        - label: この投稿がインターネット上で公開されることを理解しました。
+        - label: この投稿がインターネット上で公開されることを理解しました。 / I understand that this post is public on the internet.
           required: true
