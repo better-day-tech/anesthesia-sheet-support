@@ -13,6 +13,9 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://better-day-tech.github.io/anesthesia-sheet-support/privacy/">
   <link rel="canonical" href="https://better-day-tech.github.io/anesthesia-sheet-support/privacy/">
+  <link rel="alternate" hreflang="ja" href="https://better-day-tech.github.io/anesthesia-sheet-support/privacy/">
+  <link rel="alternate" hreflang="en" href="https://better-day-tech.github.io/anesthesia-sheet-support/en/privacy/">
+  <link rel="alternate" hreflang="x-default" href="https://better-day-tech.github.io/anesthesia-sheet-support/privacy/">
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../assets/styles.css">
   <title>Privacy Policy | AnesthesiaSheet</title>
@@ -40,7 +43,7 @@
 <main id="main" class="content">
   <header class="page-header">
     <h1>プライバシーポリシー</h1>
-    <div class="meta">第2版 / 最終更新日: 2026年7月21日</div>
+    <div class="meta">第3版 / 最終更新日: 2026年7月26日</div>
     <p class="lead">AnesthesiaSheetに保存される情報、外部送信、データ削除、問い合わせ時の取り扱いを説明します。</p>
     <div class="fact-strip" aria-label="プライバシー概要">
       <div class="fact">
@@ -56,10 +59,10 @@
         <span class="fact-value">症例データを送信しない</span>
       </div>
     </div>
-    <div class="language-links" aria-label="言語">
-      <a href="#japanese">日本語</a>
-      <a href="#english" lang="en">English</a>
-    </div>
+    <nav class="language-links" aria-label="言語">
+      <a href="./" aria-current="page" lang="ja">日本語</a>
+      <a href="../en/privacy/" hreflang="en" lang="en">English</a>
+    </nav>
   </header>
 
   <div class="page-layout">
@@ -68,11 +71,11 @@
       <nav>
         <a href="#stored-data">保存される情報</a>
         <a href="#transmission">外部送信と共有</a>
+        <a href="#purchases">アプリ内購入</a>
         <a href="#website">サポートサイト</a>
         <a href="#identifiers">識別情報</a>
         <a href="#deletion">データ削除</a>
         <a href="#support-data">サポート投稿</a>
-        <a href="#english">English</a>
       </nav>
     </aside>
 
@@ -85,14 +88,21 @@
       <section id="stored-data">
         <h2>保存される情報</h2>
         <p>症例メモ、バイタル、投与ログ、IN/OUT、設定値、ユーザーが登録した指導医リストなどは、ユーザーの端末内に保存されます。症例ファイルはiOSのData Protectionで保護され、アプリ内の設定から画面ロック中の保護と自動保存のどちらを優先するか選択できます。</p>
+        <p>アプリが非アクティブまたはバックグラウンドになると、アプリ切替画面に症例内容が残りにくいよう、表示を保護画面へ置き換えます。この機能は端末のパスコードや生体認証の代替ではなく、アプリ使用中のスクリーンショット撮影を防止するものではありません。</p>
       </section>
 
       <section id="transmission">
         <h2>外部送信と共有</h2>
         <p>アプリは外部アカウントを作成せず、症例データを開発者サーバーへ送信しません。ユーザーがiOSの共有機能を使ってデータを書き出した場合、その共有先には各サービスのプライバシーポリシーが適用されます。症例をiOSの端末バックアップに含めるかはアプリ内で選択でき、含める場合はユーザーのiOS、iCloudまたはFinderの設定に従って管理されます。</p>
-        <p>書き出しは、全記録を読み取れる個人保管用、正確な日付・症例タイトル・指導医・自由記載などを除外する共有用、全症例を暗号化する保管用に分かれます。共有用は識別性を減らすもので、匿名化を保証しません。暗号化保管用はPC上でTXTまたはJSONへ復元でき、現在はアプリへの再取込には対応していません。個人保管用と復元後のTXT・JSONは暗号化されていません。</p>
-        <p>施設設定は、ユーザーの操作によりJSONファイルとして書き出し・読み込みできます。このファイルには施設の略称、登録濃度、単位だけが含まれ、患者情報、症例情報、指導医、確認日時、アプリ内IDは含まれません。略称に正式な施設名などを入力した場合は共有先から施設を推測される可能性があります。読み込んだ設定は常に未確認として追加され、ユーザーが施設手順と実際の薬剤ラベルを確認するまで術中画面に表示されません。</p>
-        <p>暗号化バックアップは、端末内でAES-256-GCMとPBKDF2-HMAC-SHA256を使って作成されます。復旧キーは開発者へ送信・保管されず、紛失した場合に開発者が復元または再発行することはできません。</p>
+        <p>無料版では、1症例の全記録を読み取れる個人保管用と、正確な日付・症例タイトル・指導医・自由記載などを除外する共有用を書き出せます。Proでは全症例の一括書き出しと暗号化保管用を追加できます。共有用は識別性を減らすもので、匿名化を保証しません。暗号化保管用はPC上でTXTまたはJSONへ復元でき、現在はアプリへの再取込には対応していません。個人保管用と復元後のTXT・JSONは暗号化されていません。</p>
+        <p>Proでは、施設設定をユーザーの操作によりJSONファイルとして書き出し・読み込みできます。このファイルには施設の略称、登録濃度、単位だけが含まれ、患者情報、症例情報、指導医、確認日時、アプリ内IDは含まれません。略称に正式な施設名などを入力した場合は共有先から施設を推測される可能性があります。読み込んだ設定は常に未確認として追加され、ユーザーが施設手順と実際の薬剤ラベルを確認するまで術中画面に表示されません。</p>
+        <p>Proの暗号化バックアップは、端末内でAES-256-GCMとPBKDF2-HMAC-SHA256を使って作成されます。復旧キーは開発者へ送信・保管されず、紛失した場合に開発者が復元または再発行することはできません。</p>
+      </section>
+
+      <section id="purchases">
+        <h2>アプリ内購入</h2>
+        <p>任意のAnesthesiaSheet Pro購入はAppleのStoreKitとApp Storeにより処理されます。アプリはAppleが署名した購入資格を端末上で確認し、開発者のアカウント作成や独自の購入サーバーは使用しません。症例データ、施設設定、指導医ラベルまたは復旧キーを購入処理へ送信しません。</p>
+        <p>Appleは決済、購入履歴および返金に必要な情報をAppleのプライバシーポリシーに従って処理します。開発者はApp Store Connectで販売・財務レポートを受領する場合がありますが、これを症例データと結び付ける仕組みはありません。</p>
       </section>
 
       <section id="website">
@@ -123,29 +133,6 @@
         <p>このアプリは公式麻酔記録、医療機器、診断ツール、投薬指示システムではありません。最終判断には公式記録、添付文書、施設プロトコル、医療者の臨床判断を優先してください。</p>
       </section>
 
-      <section id="english" lang="en">
-        <h2>English</h2>
-        <p>Version 2 / Last updated: July 21, 2026.</p>
-        <p>AnesthesiaSheet is a personal support app for anesthesia case notes, manually entered intraoperative records, and post-case review.</p>
-        <h3>Data stored</h3>
-        <p>Case notes, vital signs, medication logs, IN/OUT records, settings, and user-entered supervisor lists are stored on the user's device. Case archives use iOS Data Protection, and users can choose whether to prioritize stronger protection while the device is locked or continued autosave after first unlock.</p>
-        <h3>Transmission and sharing</h3>
-        <p>The app does not create an external account and does not transmit case data to a developer-operated server. When a user exports data through the iOS share sheet, the selected service's privacy policy applies. Users can choose whether case archives are included in the OS-managed device backup; when included, they are managed according to the user's iOS, iCloud, or Finder settings.</p>
-        <p>Exports are separated into a readable personal archive, a sharing copy that omits exact dates, case titles, supervisor labels, and free text, and an encrypted archival backup. The sharing copy reduces identifiers but does not guarantee anonymity. The encrypted archive can be recovered to TXT or JSON on a computer; re-importing it into the app is not currently supported. Personal archives and recovered TXT or JSON files are not encrypted.</p>
-        <p>Facility settings can be exported to or imported from a JSON file at the user's request. The file contains only a facility alias, entered concentrations, and the unit; it does not contain patient or case information, supervisor labels, confirmation times, or internal app identifiers. An official facility name used as the alias may identify the facility to a recipient. Imported settings are always added as unconfirmed and remain hidden from the intraoperative screen until the user verifies them against local procedure and the actual medication label.</p>
-        <p>Encrypted backups are created on the device using AES-256-GCM and PBKDF2-HMAC-SHA256. Recovery keys are not transmitted to or retained by the developer. The developer cannot recover or reissue a lost key.</p>
-        <h3>This support site</h3>
-        <p>This site does not use first-party cookies, analytics, or advertising. It is delivered through GitHub Pages, which may process access information under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
-        <p>The recovery page provides instructions and a download only; decryption is disabled while the tool is served over the web. The downloaded tool runs as a local file and uses no external network connection, analytics, advertising, or third-party library.</p>
-        <h3>Identifiers</h3>
-        <p>Users should not enter patient-identifiable information. Dates, facility names, and staff names may also identify a person when combined with other details. Supervisor and facility names are optional on-device display labels entered by the user. Follow local policy and use initials, aliases, or role labels when formal names are unnecessary. Such labels may be included in exports and device backups.</p>
-        <h3>Deletion</h3>
-        <p>Users can delete all case data from Settings. This removes saved cases and the current working case, then creates a new empty draft. App settings are retained unless changed separately. Data already included in a device backup remains subject to Apple's backup settings.</p>
-        <h3>Public support posts</h3>
-        <p>Content submitted to GitHub Issues is public and managed by GitHub. Do not post patient, staff, or facility identifiers, real-case screenshots, or facility-settings files.</p>
-        <h3>Medical boundary</h3>
-        <p>This app is not an official anesthesia record, medical device, diagnostic tool, or medication order system. Final clinical decisions must follow official records, package labeling, local protocols, and clinician judgment.</p>
-      </section>
     </article>
   </div>
 </main>
