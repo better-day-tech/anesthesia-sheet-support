@@ -13,6 +13,9 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://better-day-tech.github.io/anesthesia-sheet-support/support/">
   <link rel="canonical" href="https://better-day-tech.github.io/anesthesia-sheet-support/support/">
+  <link rel="alternate" hreflang="ja" href="https://better-day-tech.github.io/anesthesia-sheet-support/support/">
+  <link rel="alternate" hreflang="en" href="https://better-day-tech.github.io/anesthesia-sheet-support/en/support/">
+  <link rel="alternate" hreflang="x-default" href="https://better-day-tech.github.io/anesthesia-sheet-support/support/">
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../assets/styles.css">
   <title>Support | AnesthesiaSheet</title>
@@ -40,12 +43,12 @@
 <main id="main" class="content">
   <header class="page-header">
     <h1>サポート</h1>
-    <div class="meta">最終更新日: 2026年7月21日</div>
+    <div class="meta">最終更新日: 2026年7月26日</div>
     <p class="lead">不具合報告と機能要望はGitHub Issuesで受け付けています。投稿は公開されるため、患者や職員を識別できる情報を含めないでください。</p>
-    <div class="language-links" aria-label="言語">
-      <a href="#japanese">日本語</a>
-      <a href="#english" lang="en">English</a>
-    </div>
+    <nav class="language-links" aria-label="言語">
+      <a href="./" aria-current="page" lang="ja">日本語</a>
+      <a href="../en/support/" hreflang="en" lang="en">English</a>
+    </nav>
   </header>
 
   <div class="page-layout">
@@ -56,7 +59,6 @@
         <a href="#private-reporting">非公開の安全性報告</a>
         <a href="#before-posting">投稿前の確認</a>
         <a href="#scope">対応範囲</a>
-        <a href="#english">English</a>
       </nav>
     </aside>
 
@@ -97,23 +99,9 @@
         <h2>対応範囲</h2>
         <p>個別症例の相談、緊急対応、診断、投薬や患者管理に関する助言は行いません。AnesthesiaSheetは個人メモと自己振り返りの補助アプリであり、公式記録や臨床判断の代替ではありません。</p>
         <p>暗号化バックアップの一般的な操作手順は<a href="../recovery/">オフライン復元ページ</a>で案内します。復旧キーの照会、再発行、代行復号、個別症例データの受領は行いません。</p>
+        <p>Pro購入が反映されない場合は、同じApple Accountであることと通信状態を確認し、設定の「AnesthesiaSheet Pro」から「購入を復元」を実行してください。購入・請求・返金の手続はAppleの窓口をご利用ください。問い合わせや不具合報告に購入明細、Apple Account、決済情報を投稿しないでください。</p>
       </section>
 
-      <section id="english" lang="en">
-        <h2>English</h2>
-        <p>Support is provided through public GitHub Issues for bug reports, feature requests, basic usage discussion, and release notices. Individual replies and response times are not guaranteed.</p>
-        <p>Use <a href="https://github.com/better-day-tech/anesthesia-sheet-support/security/advisories/new">GitHub private vulnerability reporting</a> for unreleased vulnerabilities or security and privacy issues. Do not submit patient, staff, or facility identifiers, real-case data, or recovery keys. This channel is not available for emergencies or individual case consultation.</p>
-        <h3>Before posting</h3>
-        <ul>
-          <li>Include the app version, iOS version, device model, and reproducible steps.</li>
-          <li>Do not include patient, staff, or facility identifiers.</li>
-          <li>Do not attach facility-settings files, case exports, encrypted backups, or recovery keys.</li>
-          <li>Use only fictional data in reproduction steps and screenshots. Do not use real-case data.</li>
-          <li>Remember that GitHub Issues are publicly visible on the internet.</li>
-        </ul>
-        <p>Individual case consultation, emergency support, diagnosis, medication advice, and patient-management advice are not provided. AnesthesiaSheet does not replace official records or clinical judgment.</p>
-        <p>General encrypted-backup instructions are available on the <a href="../recovery/">offline recovery page</a>. Recovery-key lookup, reissue, decryption on a user's behalf, and receipt of individual case data are not provided.</p>
-      </section>
     </article>
   </div>
 </main>
