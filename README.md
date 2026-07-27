@@ -24,7 +24,7 @@ AnesthesiaSheetは公式麻酔記録、医療機器、診断ツール、投薬�
 
 This repository contains the public support, privacy, terms, and offline recovery pages for AnesthesiaSheet.
 
-These English pages translate the public documents. The current shipping app interface is Japanese.
+These English pages correspond to the app's selectable Japanese and English interfaces.
 
 - [Support](https://better-day-tech.github.io/anesthesia-sheet-support/en/support/)
 - [Offline Recovery](https://better-day-tech.github.io/anesthesia-sheet-support/en/recovery/)
