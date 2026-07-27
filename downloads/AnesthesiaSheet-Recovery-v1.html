@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; img-src data:; object-src 'none'; media-src 'none'; font-src 'none'; frame-src 'none'; worker-src 'none'; base-uri 'none'; form-action 'none'">
-  <title>AnesthesiaSheet Offline Recovery v1</title>
+  <title>Anesthesia Memo Offline Recovery v1</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -111,7 +111,7 @@
 <body>
 <main>
   <header>
-    <p class="version">AnesthesiaSheet Recovery Kit v1</p>
+    <p class="version">Anesthesia Memo Recovery Kit v1</p>
     <h1>オフライン復元</h1>
     <p>このファイルは外部通信を禁止しています。ローカルで開いた場合だけ復号できます。</p>
   </header>
@@ -302,10 +302,10 @@
   });
 
   elements.text.addEventListener("click", () => {
-    if (restoredArchive) download(restoredArchive.readableText, "text/plain;charset=utf-8", "AnesthesiaSheet-Recovered.txt");
+    if (restoredArchive) download(restoredArchive.readableText, "text/plain;charset=utf-8", "AnesthesiaMemo-Recovered.txt");
   });
   elements.json.addEventListener("click", () => {
-    if (restoredArchive) download(JSON.stringify(restoredArchive, null, 2), "application/json", "AnesthesiaSheet-Recovered.json");
+    if (restoredArchive) download(JSON.stringify(restoredArchive, null, 2), "application/json", "AnesthesiaMemo-Recovered.json");
   });
 })();
 </script>

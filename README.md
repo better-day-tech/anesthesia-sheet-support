@@ -1,10 +1,10 @@
-# AnesthesiaSheet Support
+# 麻酔メモ / Anesthesia Memo Support
 
 [日本語](#日本語) | [English](#english)
 
 ## 日本語
 
-AnesthesiaSheetの公開サポート、プライバシー、利用条件、オフライン復元ページです。
+麻酔メモの公開サポート、プライバシー、利用条件、オフライン復元ページです。
 
 - [サポート](https://better-day-tech.github.io/anesthesia-sheet-support/support/)
 - [オフライン復元](https://better-day-tech.github.io/anesthesia-sheet-support/recovery/)
@@ -14,7 +14,7 @@ AnesthesiaSheetの公開サポート、プライバシー、利用条件、オ�
 
 不具合報告と機能要望はGitHub Issuesで受け付けています。患者、職員、施設を識別できる情報、実症例データ、識別可能なスクリーンショットを公開投稿に含めないでください。セキュリティまたはプライバシー上の問題は、GitHubの非公開脆弱性報告を使用してください。
 
-AnesthesiaSheetは公式麻酔記録、医療機器、診断ツール、投薬指示システムではありません。Release版は記録専用であり、用量・投与速度計算、薬物動態モデル、薬効予測、緊急治療ガイダンス、自動的な臨床推奨、アラーム、通知を提供しません。
+麻酔メモは公式麻酔記録、医療機器、診断ツール、投薬指示システムではありません。Release版は記録専用であり、用量・投与速度計算、薬物動態モデル、薬効予測、緊急治療ガイダンス、自動的な臨床推奨、アラーム、通知を提供しません。
 
 施設別の希釈濃度は、利用者が確認して手入力記録へ転記するための任意設定です。アプリの推奨値ではなく、利用者が確認するまで術中画面に表示されず、用量や投与速度の計算には使われません。
 
@@ -22,7 +22,7 @@ AnesthesiaSheetは公式麻酔記録、医療機器、診断ツール、投薬�
 
 ## English
 
-This repository contains the public support, privacy, terms, and offline recovery pages for AnesthesiaSheet.
+This repository contains the public support, privacy, terms, and offline recovery pages for Anesthesia Memo.
 
 These English pages correspond to the app's selectable Japanese and English interfaces.
 
@@ -34,7 +34,7 @@ These English pages correspond to the app's selectable Japanese and English inte
 
 Bug reports and feature requests are accepted through GitHub Issues. Do not include patient, staff, or facility identifiers, real-case data, or identifiable screenshots in public posts. Use GitHub private vulnerability reporting for security or privacy issues.
 
-AnesthesiaSheet is not an official anesthesia record, medical device, diagnostic tool, or medication order system. The shipping Release is record-only. It does not include dose or rate calculators, pharmacokinetic models, drug-effect predictions, emergency treatment guidance, automated clinical recommendations, alarms, or notifications.
+Anesthesia Memo is not an official anesthesia record, medical device, diagnostic tool, or medication order system. The shipping Release is record-only. It does not include dose or rate calculators, pharmacokinetic models, drug-effect predictions, emergency treatment guidance, automated clinical recommendations, alarms, or notifications.
 
 Facility-specific dilution concentrations are optional user-confirmed settings for manual transcription into a medication log. They are not app recommendations, remain hidden from the intraoperative screen until confirmed by the user, and are not used to calculate a dose or infusion rate.
 
