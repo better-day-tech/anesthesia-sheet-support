@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Official support, privacy, terms, and offline recovery information for Anesthesia Memo.">
+  <meta name="description" content="Official product support for Anesthesia Memo, a record-support app that organizes anesthesia charts, vital trends, and case notes on device.">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="theme-color" content="#f4f7f8" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0f1518" media="(prefers-color-scheme: dark)">
-  <meta property="og:title" content="Anesthesia Memo Support">
-  <meta property="og:description" content="Support, privacy, terms, and offline recovery information">
+  <meta property="og:title" content="Anesthesia Memo | Better Day Tech">
+  <meta property="og:description" content="A record-support app for organizing anesthesia charts, vital trends, and case notes on device.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://better-day-tech.github.io/anesthesia-sheet-support/en/">
   <link rel="canonical" href="https://better-day-tech.github.io/anesthesia-sheet-support/en/">
@@ -18,9 +18,9 @@
   <link rel="alternate" hreflang="x-default" href="https://better-day-tech.github.io/anesthesia-sheet-support/">
   <link rel="icon" type="image/png" href="../assets/app-icon.png">
   <link rel="stylesheet" href="../assets/styles.css">
-  <title>Anesthesia Memo Support</title>
+  <title>Anesthesia Memo | Better Day Tech</title>
 </head>
-<body>
+<body class="product-home">
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="header-inner">
@@ -32,82 +32,217 @@
       <span>Anesthesia Memo</span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
-      <a href="./terms/">Terms</a>
-      <a href="./recovery/">Recovery</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#boundary">Medical Boundary</a>
       <a href="./support/">Support</a>
-      <a href="./privacy/">Privacy</a>
+      <a href="../" hreflang="ja" lang="ja">日本語</a>
     </nav>
   </div>
 </header>
 
-<main id="main" class="content">
-  <section class="hero">
-    <div class="hero-brand">
-      <picture>
-        <source srcset="../assets/app-icon-dark.png" media="(prefers-color-scheme: dark)">
-        <img src="../assets/app-icon.png" alt="Anesthesia Memo app icon" width="68" height="68">
-      </picture>
+<main id="main" class="content home-content">
+  <section class="product-hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <div class="hero-brand-lockup">
+        <picture>
+          <source srcset="../assets/app-icon-dark.png" media="(prefers-color-scheme: dark)">
+          <img src="../assets/app-icon.png" alt="" width="68" height="68">
+        </picture>
+        <span>
+          <strong>Anesthesia Memo</strong>
+          <small>iPhone / iPad</small>
+        </span>
+      </div>
+      <h1 id="hero-title">Charts and case notes, on device.</h1>
+      <p class="lead">Organize manually entered intraop notes, vital trends, and case details for review.</p>
+      <div class="hero-actions">
+        <a class="primary-link" href="./support/">Open Support</a>
+        <a class="secondary-link" href="./privacy/">Review Privacy</a>
+      </div>
+      <ul class="hero-proof" aria-label="Highlights">
+        <li>Five-minute charts and vital trends</li>
+        <li>Case details, events, medication, and IN/OUT</li>
+        <li>Archive, export, and encrypted backup support</li>
+      </ul>
     </div>
-    <h1>Anesthesia Memo</h1>
-    <p class="lead">A locally stored app for personal anesthesia case notes, manually entered intraoperative records, and post-case review. This site provides the support policy, privacy information, terms, and offline recovery instructions.</p>
-    <p class="document-note">These English pages correspond to the app's selectable Japanese and English interfaces.</p>
-    <nav class="language-links" aria-label="Language">
-      <a href="../" hreflang="ja" lang="ja">日本語</a>
-      <a href="./" aria-current="page" lang="en">English</a>
-    </nav>
+
+    <div class="device-showcase" aria-label="Anesthesia Memo screen preview">
+      <div class="phone-frame" aria-hidden="true">
+        <div class="mock-screen">
+          <div class="mock-bar">
+            <span>Case Info</span>
+            <strong>SAMPLE DATA</strong>
+          </div>
+          <dl class="case-list">
+            <div><dt>ID</dt><dd>2026-08-SAMPLE</dd></div>
+            <div><dt>ASA</dt><dd>2</dd></div>
+            <div><dt>Anesthesia</dt><dd>General</dd></div>
+            <div><dt>Notes</dt><dd>Induction, ventilation, and room-exit notes organized together</dd></div>
+          </dl>
+          <div class="mini-tabs">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tablet-frame" aria-hidden="true">
+        <div class="mock-screen tablet-screen">
+          <div class="mock-bar">
+            <span>Anesthesia Chart</span>
+            <strong>SAMPLE DATA</strong>
+          </div>
+          <div class="chart-layout">
+            <div class="timeline">
+              <span>08:20 Room in</span>
+              <span>08:25 Induction</span>
+              <span>08:40 Procedure start</span>
+              <span>10:15 Room out</span>
+            </div>
+            <div class="trend-card">
+              <div class="trend-grid">
+                <i class="line red"></i>
+                <i class="line blue"></i>
+                <i class="line green"></i>
+              </div>
+            </div>
+            <table class="mock-table">
+              <tr><th>Time</th><th>Record</th><th>Status</th></tr>
+              <tr><td>08:25</td><td>Medication</td><td>Logged</td></tr>
+              <tr><td>08:40</td><td>Event</td><td>Started</td></tr>
+              <tr><td>09:10</td><td>IN/OUT</td><td>Updated</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <ul class="action-list" aria-label="Support information">
-    <li>
+  <section id="workflow" class="workflow-panel" aria-labelledby="workflow-title">
+    <h2 id="workflow-title">Record Workflow</h2>
+    <ol class="workflow-list">
+      <li>
+        <span class="step-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h12M6 10h12M6 15h8M5 3h14v18H5z"></path></svg>
+        </span>
+        <strong>Case Info</strong>
+        <p>Enter case outline and timestamps without patient-identifying information.</p>
+      </li>
+      <li>
+        <span class="step-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h4l2-6 4 12 3-8h5"></path></svg>
+        </span>
+        <strong>Intraop Records</strong>
+        <p>Organize vitals, medication events, case events, and IN/OUT records in one context.</p>
+      </li>
+      <li>
+        <span class="step-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v13H4zM7 4h10v3"></path></svg>
+        </span>
+        <strong>Review</strong>
+        <p>Return to completed cases, postoperative follow-up notes, and searchable archives.</p>
+      </li>
+      <li>
+        <span class="step-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10m0 0 4-4m-4 4-4-4M5 17h14v4H5z"></path></svg>
+        </span>
+        <strong>Preserve</strong>
+        <p>Use single-case export and encrypted backup support for personal record keeping.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="feature-section" aria-labelledby="features-title">
+    <div>
+      <h2 id="features-title">A focused surface for record support.</h2>
+      <p>Anesthesia Memo does not make automated clinical decisions. It organizes user-entered information into practical views for charting, review, export, and recovery.</p>
+    </div>
+    <div class="feature-grid">
+      <article>
+        <strong>Anesthesia Chart</strong>
+        <p>Review entered records in a five-minute timeline.</p>
+      </article>
+      <article>
+        <strong>Vital Trends</strong>
+        <p>Visualize changes over time from the same manually entered data.</p>
+      </article>
+      <article>
+        <strong>Case Archive</strong>
+        <p>Handle completed cases, follow-up notes, and single-case exports.</p>
+      </article>
+      <article>
+        <strong>Recovery Information</strong>
+        <p>Access recovery instructions and a verifiable offline recovery tool.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="privacy" class="privacy-band" aria-labelledby="privacy-title">
+    <div class="privacy-lock" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M7 11V8a5 5 0 0 1 10 0v3M6 11h12v10H6z"></path></svg>
+    </div>
+    <div>
+      <h2 id="privacy-title">Case data is stored on device by default.</h2>
+      <p>The app does not require an account and does not include advertising or analytics SDKs. Case data is not sent to a developer-operated server, and sharing or export happens only through user action.</p>
+    </div>
+    <ul class="privacy-points" aria-label="Privacy principles">
+      <li>On-device storage</li>
+      <li>No account required</li>
+      <li>No advertising SDK</li>
+      <li>No analytics SDK</li>
+    </ul>
+  </section>
+
+  <section id="boundary" class="boundary-band" aria-labelledby="boundary-title">
+    <div>
+      <h2 id="boundary-title">Medical boundary</h2>
+      <p>Anesthesia Memo is not an official anesthesia record, medical device, diagnostic tool, or medication order system. It does not diagnose, treat, select doses, provide patient-specific recommendations, issue alarms, or serve as emergency communication.</p>
+    </div>
+    <ul class="boundary-list">
+      <li>Not a substitute for official records</li>
+      <li>Not for use as a medical device</li>
+      <li>Not a basis for diagnosis or treatment decisions</li>
+      <li>Do not enter patient-identifying information</li>
+    </ul>
+  </section>
+
+  <section class="document-links" aria-labelledby="documents-title">
+    <h2 id="documents-title">Support and Public Documents</h2>
+    <div class="document-link-grid">
       <a class="action-link" href="./terms/">
         <span>
           <span class="action-title">Terms of Use</span>
           <span class="action-description">Purpose, medical limitations, user responsibilities, and liability</span>
         </span>
-        <svg class="action-mark" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="m9 18 6-6-6-6"></path>
-        </svg>
+        <svg class="action-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
       </a>
-    </li>
-    <li>
       <a class="action-link" href="./recovery/">
         <span>
           <span class="action-title">Offline Recovery</span>
-          <span class="action-description">Recovery steps and a verifiable tool for Pro encrypted backups</span>
+          <span class="action-description">Recovery steps and a verifiable tool for encrypted backups</span>
         </span>
-        <svg class="action-mark" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="m9 18 6-6-6-6"></path>
-        </svg>
+        <svg class="action-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
       </a>
-    </li>
-    <li>
       <a class="action-link" href="./support/">
         <span>
           <span class="action-title">Support</span>
           <span class="action-description">Bug reports, feature requests, and posting precautions</span>
         </span>
-        <svg class="action-mark" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="m9 18 6-6-6-6"></path>
-        </svg>
+        <svg class="action-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
       </a>
-    </li>
-    <li>
       <a class="action-link" href="./privacy/">
         <span>
           <span class="action-title">Privacy Policy</span>
           <span class="action-description">On-device storage, transmission, deletion, and sharing</span>
         </span>
-        <svg class="action-mark" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="m9 18 6-6-6-6"></path>
-        </svg>
+        <svg class="action-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
       </a>
-    </li>
-  </ul>
-
-  <aside class="notice" aria-label="Medical boundary">
-    <strong>Medical boundary</strong>
-    <p>Anesthesia Memo is not an official anesthesia record, medical device, diagnostic tool, or medication order system. Final clinical decisions must follow official records, package labeling, local protocols, and clinician judgment.</p>
-  </aside>
+    </div>
+    <nav class="language-links" aria-label="Language">
+      <a href="../" hreflang="ja" lang="ja">日本語</a>
+      <a href="./" aria-current="page" lang="en">English</a>
+    </nav>
+  </section>
 </main>
 
 <footer class="site-footer">

@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="麻酔メモの公式サポートとプライバシー情報。">
+  <meta name="description" content="麻酔表、バイタルトレンド、症例メモを端末内に整理する記録補助アプリ、麻酔メモの公式サポートページ。">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="theme-color" content="#f4f7f8" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0f1518" media="(prefers-color-scheme: dark)">
-  <meta property="og:title" content="麻酔メモ サポート">
-  <meta property="og:description" content="サポート窓口とプライバシー情報">
+  <meta property="og:title" content="麻酔メモ | Better Day Tech">
+  <meta property="og:description" content="麻酔表、バイタルトレンド、症例メモを端末内に整理する記録補助アプリ。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://better-day-tech.github.io/anesthesia-sheet-support/">
   <link rel="canonical" href="https://better-day-tech.github.io/anesthesia-sheet-support/">
@@ -18,9 +18,9 @@
   <link rel="alternate" hreflang="x-default" href="https://better-day-tech.github.io/anesthesia-sheet-support/">
   <link rel="icon" type="image/png" href="./assets/app-icon.png">
   <link rel="stylesheet" href="./assets/styles.css">
-  <title>麻酔メモ サポート</title>
+  <title>麻酔メモ | Better Day Tech</title>
 </head>
-<body>
+<body class="product-home">
 <a class="skip-link" href="#main">本文へ移動</a>
 <header class="site-header">
   <div class="header-inner">
@@ -32,81 +32,217 @@
       <span>麻酔メモ</span>
     </a>
     <nav class="site-nav" aria-label="メインナビゲーション">
-      <a href="./terms/">利用条件</a>
-      <a href="./recovery/">復元</a>
+      <a href="#workflow">記録の流れ</a>
+      <a href="#privacy">プライバシー</a>
+      <a href="#boundary">医療上の注意</a>
       <a href="./support/">サポート</a>
-      <a href="./privacy/">プライバシー</a>
+      <a href="./en/" hreflang="en" lang="en">English</a>
     </nav>
   </div>
 </header>
 
-<main id="main" class="content">
-  <section class="hero">
-    <div class="hero-brand">
-      <picture>
-        <source srcset="./assets/app-icon-dark.png" media="(prefers-color-scheme: dark)">
-        <img src="./assets/app-icon.png" alt="麻酔メモのアプリアイコン" width="68" height="68">
-      </picture>
+<main id="main" class="content home-content">
+  <section class="product-hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <div class="hero-brand-lockup">
+        <picture>
+          <source srcset="./assets/app-icon-dark.png" media="(prefers-color-scheme: dark)">
+          <img src="./assets/app-icon.png" alt="" width="68" height="68">
+        </picture>
+        <span>
+          <strong>麻酔メモ</strong>
+          <small>iPhone / iPad</small>
+        </span>
+      </div>
+      <h1 id="hero-title">麻酔表と症例メモを、<br>端末内に整理。</h1>
+      <p class="lead">手入力した術中記録、バイタルトレンド、症例情報を、個人の振り返りに使いやすい形でまとめる記録補助アプリです。</p>
+      <div class="hero-actions">
+        <a class="primary-link" href="./support/">サポートを見る</a>
+        <a class="secondary-link" href="./privacy/">プライバシーを確認</a>
+      </div>
+      <ul class="hero-proof" aria-label="主な特徴">
+        <li>5分単位の麻酔表とバイタル推移</li>
+        <li>症例情報、投与・出来事、IN/OUTを整理</li>
+        <li>症例一覧、書き出し、暗号化バックアップに対応</li>
+      </ul>
     </div>
-    <h1>麻酔メモ</h1>
-    <p class="lead">麻酔症例の個人メモ、術中記録、症例の振り返りを補助するローカル保存型アプリです。こちらではサポート方針とプライバシー情報をご案内します。</p>
-    <nav class="language-links" aria-label="言語">
-      <a href="./" aria-current="page" lang="ja">日本語</a>
-      <a href="./en/" hreflang="en" lang="en">English</a>
-    </nav>
+
+    <div class="device-showcase" aria-label="麻酔メモの画面イメージ">
+      <div class="phone-frame" aria-hidden="true">
+        <div class="mock-screen">
+          <div class="mock-bar">
+            <span>症例情報</span>
+            <strong>架空データ</strong>
+          </div>
+          <dl class="case-list">
+            <div><dt>ID</dt><dd>2026-08-SAMPLE</dd></div>
+            <div><dt>ASA</dt><dd>2</dd></div>
+            <div><dt>麻酔</dt><dd>全身麻酔</dd></div>
+            <div><dt>メモ</dt><dd>導入、換気、退室までの記録を整理</dd></div>
+          </dl>
+          <div class="mini-tabs">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tablet-frame" aria-hidden="true">
+        <div class="mock-screen tablet-screen">
+          <div class="mock-bar">
+            <span>麻酔表</span>
+            <strong>SAMPLE DATA</strong>
+          </div>
+          <div class="chart-layout">
+            <div class="timeline">
+              <span>08:20 入室</span>
+              <span>08:25 麻酔導入</span>
+              <span>08:40 手術開始</span>
+              <span>10:15 退室</span>
+            </div>
+            <div class="trend-card">
+              <div class="trend-grid">
+                <i class="line red"></i>
+                <i class="line blue"></i>
+                <i class="line green"></i>
+              </div>
+            </div>
+            <table class="mock-table">
+              <tr><th>時刻</th><th>記録</th><th>量</th></tr>
+              <tr><td>08:25</td><td>導入薬</td><td>記録済み</td></tr>
+              <tr><td>08:40</td><td>イベント</td><td>開始</td></tr>
+              <tr><td>09:10</td><td>IN/OUT</td><td>更新</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <ul class="action-list" aria-label="サポート情報">
-    <li>
+  <section id="workflow" class="workflow-panel" aria-labelledby="workflow-title">
+    <h2 id="workflow-title">記録の流れ</h2>
+    <ol class="workflow-list">
+      <li>
+        <span class="step-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h12M6 10h12M6 15h8M5 3h14v18H5z"></path></svg>
+        </span>
+        <strong>症例情報</strong>
+        <p>患者背景を含まない範囲で、症例概要と時刻を手入力します。</p>
+      </li>
+      <li>
+        <span class="step-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h4l2-6 4 12 3-8h5"></path></svg>
+        </span>
+        <strong>術中記録</strong>
+        <p>バイタル、投与、出来事、IN/OUTを同じ症例の文脈で整理します。</p>
+      </li>
+      <li>
+        <span class="step-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v13H4zM7 4h10v3"></path></svg>
+        </span>
+        <strong>振り返り</strong>
+        <p>症例一覧、術後鎮痛フォロー、検索であとから見直せます。</p>
+      </li>
+      <li>
+        <span class="step-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10m0 0 4-4m-4 4-4-4M5 17h14v4H5z"></path></svg>
+        </span>
+        <strong>保管</strong>
+        <p>単一症例の書き出しと、暗号化バックアップで個人保管を補助します。</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="feature-section" aria-labelledby="features-title">
+    <div>
+      <h2 id="features-title">記録補助として、必要な面をまとめる。</h2>
+      <p>麻酔メモは自動判断ではなく、利用者が入力した情報を見やすく整理するためのツールです。麻酔表、トレンド、症例一覧、復元情報への導線を、日々の記録作業に合わせて配置しています。</p>
+    </div>
+    <div class="feature-grid">
+      <article>
+        <strong>麻酔表</strong>
+        <p>入力済み記録を時系列で整え、5分単位の流れを確認できます。</p>
+      </article>
+      <article>
+        <strong>バイタルトレンド</strong>
+        <p>同じ手入力データから、経時的な変化を視覚的に振り返れます。</p>
+      </article>
+      <article>
+        <strong>症例アーカイブ</strong>
+        <p>完了症例、フォロー、書き出しを一つの場所から扱えます。</p>
+      </article>
+      <article>
+        <strong>復元情報</strong>
+        <p>暗号化バックアップの復元手順と検証可能な復元ツールを公開しています。</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="privacy" class="privacy-band" aria-labelledby="privacy-title">
+    <div class="privacy-lock" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M7 11V8a5 5 0 0 1 10 0v3M6 11h12v10H6z"></path></svg>
+    </div>
+    <div>
+      <h2 id="privacy-title">症例データは、原則として端末内に。</h2>
+      <p>アカウント登録、広告SDK、解析SDKは使っていません。症例データは開発者サーバーへ送信されず、共有や書き出しは利用者の操作で行われます。</p>
+    </div>
+    <ul class="privacy-points" aria-label="プライバシー方針">
+      <li>端末内保存</li>
+      <li>アカウント不要</li>
+      <li>広告SDKなし</li>
+      <li>解析SDKなし</li>
+    </ul>
+  </section>
+
+  <section id="boundary" class="boundary-band" aria-labelledby="boundary-title">
+    <div>
+      <h2 id="boundary-title">医療上の位置づけ</h2>
+      <p>麻酔メモは公式麻酔記録、医療機器、診断ツール、投薬指示システムではありません。診断、治療、投薬、用量選択、患者別推奨、アラーム、緊急連絡を提供しません。</p>
+    </div>
+    <ul class="boundary-list">
+      <li>公式記録の代替ではありません</li>
+      <li>医療機器として使用しないでください</li>
+      <li>診断・治療判断の根拠にしないでください</li>
+      <li>患者識別情報を入力しないでください</li>
+    </ul>
+  </section>
+
+  <section class="document-links" aria-labelledby="documents-title">
+    <h2 id="documents-title">サポートと公開文書</h2>
+    <div class="document-link-grid">
       <a class="action-link" href="./terms/">
         <span>
           <span class="action-title">利用条件</span>
           <span class="action-description">用途、医療上の限界、利用者の責任、保証の範囲</span>
         </span>
-        <svg class="action-mark" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="m9 18 6-6-6-6"></path>
-        </svg>
+        <svg class="action-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
       </a>
-    </li>
-    <li>
       <a class="action-link" href="./recovery/">
         <span>
           <span class="action-title">オフライン復元</span>
-          <span class="action-description">Pro暗号化バックアップの復元手順と検証可能な復元ツール</span>
+          <span class="action-description">暗号化バックアップの復元手順と検証可能な復元ツール</span>
         </span>
-        <svg class="action-mark" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="m9 18 6-6-6-6"></path>
-        </svg>
+        <svg class="action-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
       </a>
-    </li>
-    <li>
       <a class="action-link" href="./support/">
         <span>
           <span class="action-title">サポート</span>
           <span class="action-description">不具合報告、機能要望、投稿前の注意事項</span>
         </span>
-        <svg class="action-mark" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="m9 18 6-6-6-6"></path>
-        </svg>
+        <svg class="action-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
       </a>
-    </li>
-    <li>
       <a class="action-link" href="./privacy/">
         <span>
           <span class="action-title">プライバシーポリシー</span>
           <span class="action-description">端末内保存、データ送信、削除と共有の扱い</span>
         </span>
-        <svg class="action-mark" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="m9 18 6-6-6-6"></path>
-        </svg>
+        <svg class="action-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
       </a>
-    </li>
-  </ul>
-
-  <aside class="notice" aria-label="医療上の注意">
-    <strong>医療上の位置づけ</strong>
-    <p>麻酔メモは公式麻酔記録、医療機器、診断ツール、投薬指示システムではありません。最終判断には公式記録、添付文書、施設プロトコル、医療者の臨床判断を優先してください。</p>
-  </aside>
+    </div>
+    <nav class="language-links" aria-label="言語">
+      <a href="./" aria-current="page" lang="ja">日本語</a>
+      <a href="./en/" hreflang="en" lang="en">English</a>
+    </nav>
+  </section>
 </main>
 
 <footer class="site-footer">
