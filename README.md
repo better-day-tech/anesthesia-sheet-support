@@ -14,7 +14,9 @@
 
 不具合報告と機能要望はGitHub Issuesで受け付けています。患者、職員、施設を識別できる情報、実症例データ、識別可能なスクリーンショットを公開投稿に含めないでください。セキュリティまたはプライバシー上の問題は、GitHubの非公開脆弱性報告を使用してください。
 
-麻酔メモは公式麻酔記録、医療機器、診断ツール、投薬指示システムではありません。Release版は記録専用であり、用量・投与速度計算、薬物動態モデル、薬効予測、緊急治療ガイダンス、自動的な臨床推奨、アラーム、通知を提供しません。
+麻酔メモは公式麻酔記録、医療機器、診断ツール、投薬指示システムではありません。本アプリは記録専用であり、用量・投与速度計算、薬物動態モデル、薬効予測、緊急治療ガイダンス、自動的な臨床推奨、アラーム、通知を提供しません。
+
+基本の記録・編集・端末内保存と1症例の書き出しは無料です。Proは買い切り型の任意購入で、複数施設・指導医、一括書き出し、暗号化バックアップ、施設設定ファイルの入出力を追加します。開発支援は機能を解放しない任意の消耗型購入です。
 
 施設別の希釈濃度は、利用者が確認して手入力記録へ転記するための任意設定です。アプリの推奨値ではなく、利用者が確認するまで術中画面に表示されず、用量や投与速度の計算には使われません。
 
@@ -34,7 +36,9 @@ These English pages correspond to the app's selectable Japanese and English inte
 
 Bug reports and feature requests are accepted through GitHub Issues. Do not include patient, staff, or facility identifiers, real-case data, or identifiable screenshots in public posts. Use GitHub private vulnerability reporting for security or privacy issues.
 
-Anesthesia Memo is not an official anesthesia record, medical device, diagnostic tool, or medication order system. The shipping Release is record-only. It does not include dose or rate calculators, pharmacokinetic models, drug-effect predictions, emergency treatment guidance, automated clinical recommendations, alarms, or notifications.
+Anesthesia Memo is not an official anesthesia record, medical device, diagnostic tool, or medication order system. Anesthesia Memo is for personal records and review. It does not include dose or rate calculators, pharmacokinetic models, drug-effect predictions, emergency treatment guidance, automated clinical recommendations, alarms, or notifications.
+
+Core recording, editing, on-device storage, and single-case export are free. The optional one-time Pro purchase adds multiple profiles and supervisor labels, bulk export, encrypted backup, and facility-profile transfer. Optional consumable development-support purchases do not unlock features.
 
 Facility-specific dilution concentrations are optional user-confirmed settings for manual transcription into a medication log. They are not app recommendations, remain hidden from the intraoperative screen until confirmed by the user, and are not used to calculate a dose or infusion rate.
 

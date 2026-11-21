@@ -1373,3 +1373,19 @@ li {
     scroll-behavior: auto;
   }
 }
+
+/* Clear comparisons and non-overlapping illustrative screens. */
+.purchase-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 20px 0; }
+.purchase-grid > div { padding: 20px; border: 1px solid var(--border); border-radius: 12px; }
+.purchase-grid h3 { margin-top: 0; }
+.notice { margin-bottom: 36px; }
+.device-showcase { display: grid; grid-template-columns: minmax(130px, .7fr) minmax(0, 1.5fr); gap: 14px; align-items: center; min-height: 420px; }
+.device-showcase .phone-frame, .device-showcase .tablet-frame { position: relative; inset: auto; width: 100%; box-sizing: border-box; }
+.device-showcase .phone-frame { align-self: end; margin-bottom: 16px; }
+.device-showcase .chart-layout { grid-template-columns: minmax(0, 1fr); }
+.device-showcase .timeline { display: flex; flex-wrap: wrap; gap: 8px 14px; }
+.device-showcase .trend-card, .device-showcase .trend-grid { min-height: 100px; height: 100px; }
+.document-page h1 { text-wrap: balance; }
+@media (max-width: 600px) { .purchase-grid { grid-template-columns: 1fr; } .device-showcase { grid-template-columns: minmax(115px, .65fr) minmax(0, 1.35fr); gap: 8px; } }
+
+@media (max-width: 600px) { .device-showcase { display: block; min-height: 0; } .device-showcase .phone-frame { display: none; } .device-showcase .tablet-frame { transform: none; width: 100%; } }
