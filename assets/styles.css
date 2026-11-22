@@ -1391,6 +1391,10 @@ li {
 .device-showcase .case-list dd { overflow-wrap: anywhere; }
 .device-showcase .timeline { display: flex; flex-wrap: wrap; gap: 8px 14px; }
 .device-showcase .trend-card, .device-showcase .trend-grid { min-height: 100px; height: 100px; }
+.device-showcase .trend-card { overflow: hidden; }
+.device-showcase .trend-grid .red { top: 28%; }
+.device-showcase .trend-grid .blue { top: 52%; }
+.device-showcase .trend-grid .green { top: 76%; }
 .document-page h1 { text-wrap: balance; }
 @media (max-width: 600px) {
   .purchase-grid { grid-template-columns: 1fr; }
