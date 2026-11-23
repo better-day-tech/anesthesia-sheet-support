@@ -54,3 +54,7 @@ node tests/site-links-smoke.mjs
 node tests/public-surface-audit.mjs
 (cd downloads && shasum -a 256 -c SHA256SUMS.txt)
 ```
+
+GitHub Actions runs all four checks on pushes to main and pull requests. You can also run them from the Actions tab with Run workflow. The workflow checks files only; GitHub Pages keeps its existing publishing settings.
+
+mainへのpushとPull Requestでは、上の4項目をGitHub Actionsで自動確認します。Actionsの「Run workflow」から手動実行もできます。検証のみを行い、GitHub Pagesの公開設定は変更しません。
